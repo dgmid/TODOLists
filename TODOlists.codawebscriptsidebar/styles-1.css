@@ -1,0 +1,379 @@
+/* note(@duncanmid): TODOLists - Coda 2 Sidebar Plugin v.1.1 | © D.G. Midwinter, @duncanmid */
+
+/* @group globals */
+
+* {
+	box-sizing: border-box !important;
+	cursor: default;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	border: 0 !important;
+	padding: 0 !important;
+}
+
+body {
+	background: #142636;
+	color: #F6F7EE;
+	position: relative;
+	font-family: -apple-system, Helvetica, Arial, sans-serif !important;
+}
+
+/* @end */
+
+/* @group header */
+
+header {
+	width: 100%;
+	height: 30px;
+	padding: 5px 15px;
+	text-align: right;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #2A3B49;
+	box-shadow: 0 0 10px rgba(0,0,0,.25);
+	z-index: 1;
+	overflow-x: scroll;
+	white-space: nowrap;
+}
+
+select {
+	-webkit-appearance: none;
+	border: 0px;
+	color: #F6F7EE;
+	background-color: #142636;
+	font-size: 12px;
+	height: 20px;
+	width: 100%;
+	padding: 3px 25px 3px 10px;
+	font-weight: 900;
+	border-radius: 3px;
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+
+select[disabled] {
+	opacity: .5;
+}
+
+select:focus {
+	outline: 0;
+}
+
+.select-wrapper {
+	display: block;
+	position: relative;
+	width: 50%;
+	float: left;
+}
+
+.select-wrapper:nth-of-type(1) {
+	padding-right: 2px;
+}
+
+.select-wrapper:nth-of-type(2) {
+	padding-left: 2px;
+}
+
+.select-wrapper::after {
+	content: url(select-1.svg);
+	position: absolute;
+	top: 0;
+	right: 8px;
+}
+
+#comment-type-color {
+	display: block;
+	content: '';
+	width: 6px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	border-radius: 3px 0 0 3px;
+	background-color: transparent;
+	z-index: 1;
+}
+
+#comment-type {
+	padding-left: 15px;
+}
+
+/* @end */
+
+/* @group main */
+
+main {
+	margin: 30px 0;
+	padding: 0 15px 60px;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.main-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.blur {
+	filter: blur(5px);
+}
+
+.main-list:empty {
+	height: calc(100% - 30px);
+	background: url('icon-large-1.svg') no-repeat center;
+}
+
+	/* @group comments */
+
+	.main-list li {
+		position: relative;
+		display: -webkit-box;
+		font-size: 12px;
+		line-height: 15px;
+		margin-bottom: 10px;
+		padding: 10px 10px 10px 20px;
+		background-image: linear-gradient(-180deg, #475768 0%, #2C3A49 20px);
+		box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+		border-radius: 4px;
+		
+	}
+	
+	.content {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+	.main-list li .color {
+		display: block;
+		content: '';
+		width: 10px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		border-radius: 4px 0 0 4px;
+	}
+	
+	.comment-info {
+		position: absolute;
+		top: -6px;
+		right: -4px;
+		font-family: 'Menlo';
+		font-size: 8px;
+	}
+	
+	.comment-info div:first-child {
+		border-radius: 8px 0 0 8px;
+	}
+	
+	.comment-info div:last-child {
+		border-radius: 0 8px 8px 0;
+	}
+	
+	.comment-info div:only-child {
+		border-radius: 8px;
+	}
+	
+	.labels,
+	.lines,
+	.specifier {
+		display: inline-block;
+		height: 15px;
+		font-weight: bold;
+		background: black;
+		padding: 0 6px;
+		margin-right: 1px;
+	}
+	
+	.uppercase-0 .labels {
+		text-transform: lowercase;
+	}
+	
+	.uppercase-1 .labels {
+		text-transform: uppercase;
+	}
+	
+	.comment-info.labels-0 .labels,
+	.comment-info.lines-0 .lines,
+	.comment-info.specifier-0 .specifier {
+		display: none;
+	}
+	
+	.main-list li.selected .content {
+		display: block;
+		-webkit-line-clamp: 0;
+	}
+	
+	.delete {
+		-webkit-appearance: none;
+		display: none;
+		border: 0;
+		padding: 0;
+		width: 15px;
+		height: 15px;
+		font-size: 12px;
+		font-weight: 900;
+		color: #fff;
+		background: #000;
+		border-radius: 50%;
+		position: absolute;
+		left: -8px;
+		top: -6px;
+	}
+	
+	.main-list li.selected .delete {
+		display: block;
+	}
+	
+	.delete:active {
+		background: #AFC4DC;
+	}
+
+	/* @end */
+
+/* @end */
+
+/* @group footer */
+
+footer {
+	width: 100%;
+	height: calc(100% - 30px);
+	padding: 0;
+	background-color: transparent;
+	position: fixed;
+	bottom: calc(-100% + 60px);
+	left: 0;
+	box-shadow: 0 0 10px rgba(0,0,0,.25);
+	transition: bottom .15s ease-in;
+}
+
+footer.revealed {
+	bottom: 0;
+}
+
+.footer-head {
+	font-size: 10px;
+	line-height: 30px;
+	padding: 0 15px;
+	display: block;
+	color: #B0C4DE;
+	background-color: #2A3B49;
+	position: relative;
+}
+
+.footer-head .select-wrapper {
+	width: 100px;
+	float: none;
+}
+
+#toggle-options {
+	appearance: none;
+	border: 0;
+	width: 27px;
+	height: 30px;
+	padding: 0;
+	background: transparent;
+	position: absolute;
+	top: 0;
+	right: 15px;
+}
+
+footer .options-svg {
+	fill: #F6F7EE;
+}
+
+footer.revealed .options-svg {
+	fill: #000;
+}
+
+/* @end */
+
+/* @group options */
+
+.options {
+	clear: both;
+	height: 100%;
+	padding: 10px 15px 50px;
+	background-color: rgba(0,0,0,.5);
+	margin: 0;
+	font-size: 12px;
+	overflow-y: scroll;
+}
+
+.labels-options {
+	margin-bottom: 20px;
+}
+
+.labels-options label,
+.additional-options label {
+	display: block;
+	line-height: 21px;
+	height: 21px;
+	margin-bottom: 6px;
+	text-align: right;
+}
+
+
+.labels-options label span {
+	text-transform: uppercase;
+}
+
+.additional-options {
+	padding-bottom: 15px;
+	border-bottom: 1px solid #AEC4DA;
+	margin-bottom: 15px;
+}
+
+.labels-options label span,
+.additional-options label span {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.labels-options input[type="text"] {
+	display: inline-block;
+	padding: 4px 10px;
+	width: calc(100% - 70px);
+	border: 2px solid #5A646D;
+	background-color: transparent;
+	color: #fff;
+}
+
+.labels-options input[type="text"]:focus {
+	outline: none;
+}
+
+.additional-options input[type="checkbox"] {
+	vertical-align: -5px !important;
+	margin-left: 5px !important;
+}
+
+
+#sample,
+#twitter {
+	float: right;
+	border: 0;
+	background-color: #293B48;
+	color: #fff;
+	font-weight: bold;
+	opacity: 1;
+	transition: opacity .1s ease-in-out;
+}
+
+#sample:active,
+#twitter:active {
+	opacity: .6;
+}
+
+/* @end */
