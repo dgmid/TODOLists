@@ -2,7 +2,7 @@
 
 Coda2 webscript sidebar plugin for managing TODO comments.
 
-![](img/todo-lists.png)
+![](https://github.com/dgmid/TODOLists-WebScript-Sidebar/raw/master/img/todo-lists.png)
 
 
 ## Installation
