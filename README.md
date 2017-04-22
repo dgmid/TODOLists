@@ -37,15 +37,13 @@ The following types of comment are recognised:
 <!-- TODO lorem ipsum dolor sit amet -->
 ```
 
-When a comment is selected in the sidebar, it's *label* type can be quickly modified using the **mark as…** menu.
-
-A *specifier* (for example, the name of the person responsible for the comment) can be added in parenthesis directly after the *label*:
+Comments can be configured to display the *label* type (by color and by name), the line number and a *specifier* (for example, the name of the person responsible for the comment). The *specifier* can be added in parenthesis directly after the *label*:
 
 ```
 //note(@duncanmid): lorem ipsum dolor sit amet…
 ```
 
-Comments can be filtered by *label* and by *specifier* using the **label** and **specifier** menus.
+When a comment is selected in the sidebar, it's *label* type can be quickly modified using the **mark as…** menu. Comments can be filtered by *label* and by *specifier* using the **label** and **specifier** menus.
 
 The plugin options can be accessed by clicking the gear icon ![options](https://cloud.githubusercontent.com/assets/1267580/25303541/67516d1a-2755-11e7-925c-f13267800931.png).
 
