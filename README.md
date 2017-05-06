@@ -1,6 +1,6 @@
-# ![todo-lists-icon](https://cloud.githubusercontent.com/assets/1267580/25303557/a094af88-2755-11e7-9a9f-61c5bae7778b.png) TODOLists
+# ![todo-lists-icon](https://cloud.githubusercontent.com/assets/1267580/25303557/a094af88-2755-11e7-9a9f-61c5bae7778b.png) TODOlists
 
-TODOLists is a [Coda](https://www.panic.com/coda/) webscript sidebar plugin for managing TODO comments
+TODOlists is a [Coda](https://www.panic.com/coda/) webscript sidebar plugin for managing TODO comments
 
 ![todo-lists](https://cloud.githubusercontent.com/assets/1267580/25303540/6737fa24-2755-11e7-91d2-8bf780244255.png)
 
@@ -53,4 +53,4 @@ The plugin options can be accessed by clicking the gear icon ![options](https://
 
 ## License
 
-CC-BY-NC-SA 4.0 [![cc-by-nc-sa-4.0](https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+**TODOlists** is released under the MIT Licence
