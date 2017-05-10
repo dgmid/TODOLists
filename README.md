@@ -7,7 +7,7 @@ TODOlists is a [Coda](https://www.panic.com/coda/) webscript sidebar plugin for 
 
 ## Installation
 
-1. Download [TODOLists-WebScript-Sidebar-master.zip](https://github.com/dgmid/TODOLists-WebScript-Sidebar/archive/master.zip).
+1. Download [TODOLists-WebScript-Sidebar-master.zip](https://github.com/dgmid/TODOLists/archive/master.zip).
 2. Unzip it.
 3. Double-click the "TODOlists.codawebscriptsidebar" icon.
 
