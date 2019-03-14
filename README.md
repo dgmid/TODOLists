@@ -1,4 +1,4 @@
-# ![todo-lists-icon](https://cloud.githubusercontent.com/assets/1267580/25303557/a094af88-2755-11e7-9a9f-61c5bae7778b.png) TODOlists
+# ![todo-lists-icon](https://cloud.githubusercontent.com/assets/1267580/25303557/a094af88-2755-11e7-9a9f-61c5bae7778b.png) TODOlists v.1.2
 
 TODOlists is a [Coda](https://www.panic.com/coda/) webscript sidebar plugin for managing TODO comments
 

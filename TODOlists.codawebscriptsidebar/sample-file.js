@@ -1,4 +1,4 @@
-//note(@duncanmid): TODOLists - Coda 2 Sidebar Plugin v.1.1 | © D.G. Midwinter, @duncanmid
+//note(@duncanmid): TODOLists - Coda 2 Sidebar Plugin v.1.2 | © D.G. Midwinter, @duncanmid
 
 function createSampleFile() {
 

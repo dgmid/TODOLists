@@ -1,4 +1,4 @@
-/* note(@duncanmid): TODOLists - Coda 2 Sidebar Plugin v.1.1 | © D.G. Midwinter, @duncanmid */
+/* note(@duncanmid): TODOLists - Coda 2 Sidebar Plugin v.1.2 | © D.G. Midwinter, @duncanmid */
 
 /* @group globals */
 
@@ -35,8 +35,8 @@ header {
 	left: 0;
 	box-shadow: 0 0 10px rgba(0,0,0,.25);
 	z-index: 1;
-	overflow-x: scroll;
 	white-space: nowrap;
+	overflow: hidden;
 }
 
 select {
@@ -82,6 +82,7 @@ select:focus {
 	position: absolute;
 	top: 0;
 	right: 8px;
+	pointer-events: none;
 }
 
 #comment-type-color {
@@ -356,7 +357,7 @@ footer.revealed .options-svg {
 }
 
 #sample,
-#twitter {
+#mastodon {
 	float: right;
 }
 
